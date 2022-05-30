@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlaneController : MonoBehaviour
 {
     public Joystick joystick;
 
     public Slider speedSlider;
+    public TextMeshProUGUI speedField;
 
     public float forwardSpeed = 15f;
     public float horizontalSpeed = 4f;
@@ -47,6 +49,8 @@ public class PlaneController : MonoBehaviour
     {
         HandlePlaneSpeed();
         HandlePlaneMovement();
+
+        speedField.text = "Speed: " + (int)rb.velocity.magnitude;
     }
 
     private void HandlePlaneMovement()
