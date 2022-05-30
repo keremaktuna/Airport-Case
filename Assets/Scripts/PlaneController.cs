@@ -8,16 +8,20 @@ public class PlaneController : MonoBehaviour
 {
     public Joystick joystick;
 
+    [Header("Speed UI")]
     public Slider speedSlider;
     public TextMeshProUGUI speedField;
 
+    [Header("Plane Speed")]
     public float forwardSpeed = 15f;
     public float horizontalSpeed = 4f;
     public float verticalSpeed = 4f;
 
+    [Header("Plane Max Rotation")]
     public float maxHorizontalRotation = 0.1f;
     public float maxVerticalRotation = 0.06f;
 
+    [Header("Smoothness Settings")]
     public float smoothness = 5f;
     public float rotationSmoothness = 5f;
 
@@ -28,6 +32,8 @@ public class PlaneController : MonoBehaviour
 
     private float forwardSpeedMultiplier = 100f;
     private float speedMultiplier = 1000f;
+
+    [HideInInspector] public int score;
 
     private void Start()
     {

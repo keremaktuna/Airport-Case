@@ -18,4 +18,9 @@ public class CheckpointSingle : MonoBehaviour
     {
         this.trackCheckpoints = trackCheckpoints;
     }
+
+    public void DestroyChecpoint()
+    {
+        Destroy(gameObject);
+    }
 }
